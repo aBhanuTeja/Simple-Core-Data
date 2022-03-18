@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var dataTableView: UITableView!
+    @IBOutlet weak var filterBtn: UIBarButtonItem!
     @IBOutlet weak var noDataLbl: UILabel!
 
     private var items: [UserAddressData]?
@@ -29,15 +30,33 @@ class ViewController: UIViewController {
         items?.removeAll()
         if let addresses = UserAddressDataModel.shared.fetchAddresses(), addresses.count > 0 {
             items = addresses
-            dataTableView.isHidden = false
-            noDataLbl.isHidden = true
-            DispatchQueue.main.async {
-                self.dataTableView.reloadData()
-            }
+            performOperationForAvailableData()
         } else {
-            noDataLbl.isHidden = false
-            dataTableView.isHidden = true
+            performOperationForUnAvailableData()
         }
+    }
+
+    @IBAction func filterBtnClicked(_ sender: Any) {
+        items?.removeAll()
+        if let addresses = UserAddressDataModel.shared.getFilterData(), addresses.count > 0 {
+            items = addresses
+            performOperationForAvailableData()
+        } else {
+            performOperationForUnAvailableData()
+        }
+    }
+
+    fileprivate func performOperationForAvailableData() {
+        dataTableView.isHidden = false
+        noDataLbl.isHidden = true
+        DispatchQueue.main.async {
+            self.dataTableView.reloadData()
+        }
+    }
+    
+    fileprivate func performOperationForUnAvailableData() {
+        noDataLbl.isHidden = false
+        dataTableView.isHidden = true
     }
 }
 

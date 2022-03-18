@@ -32,7 +32,7 @@ class FieldsViewController: UIViewController {
             localityTF.text = selectedItem?.locality
         }
     }
-    
+
     @IBAction func saveBtnClicked(_ sender: Any) {
         if selectedItem != nil {
             selectedItem?.city = cityTF.text?.firstUppercased

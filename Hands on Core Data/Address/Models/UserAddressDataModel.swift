@@ -40,4 +40,15 @@ class UserAddressDataModel {
             
         }
     }
+
+    func getFilterData() -> [UserAddressData]? {
+        do {
+            let completeData = UserAddressData.fetchRequest() as NSFetchRequest<UserAddressData>
+            let predicate = NSPredicate(format: "city CONTAINS %@", "Nellore")
+            completeData.predicate = predicate
+            return try context.fetch(completeData)
+        } catch {
+            return nil
+        }
+    }
 }

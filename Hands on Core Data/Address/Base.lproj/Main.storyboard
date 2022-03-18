@@ -43,15 +43,24 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Addresses" largeTitleDisplayMode="always" id="iuz-GS-Yk7">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="MgM-LN-V0J">
-                            <color key="tintColor" systemColor="systemOrangeColor"/>
-                            <connections>
-                                <segue destination="Z5k-bz-IY0" kind="show" id="B14-Vg-KL1"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem style="done" systemItem="add" id="MgM-LN-V0J">
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <connections>
+                                    <segue destination="Z5k-bz-IY0" kind="show" id="B14-Vg-KL1"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="slider.vertical.3" catalog="system" id="1Fn-mH-EqA">
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <connections>
+                                    <action selector="filterBtnClicked:" destination="BYZ-38-t0r" id="3zg-aZ-BYR"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="dataTableView" destination="Lyu-PJ-aTo" id="elX-du-LbS"/>
+                        <outlet property="filterBtn" destination="1Fn-mH-EqA" id="Pzo-Vl-3qS"/>
                         <outlet property="noDataLbl" destination="Od8-ak-PSy" id="eSc-Up-GMi"/>
                     </connections>
                 </viewController>
@@ -207,6 +216,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="slider.vertical.3" catalog="system" width="128" height="111"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
