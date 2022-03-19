@@ -49,7 +49,7 @@ class ViewController: UIViewController {
 
     fileprivate func presentFilterView() {
         let filterVC = self.storyboard?.instantiateViewController(withIdentifier: "FilterVC") as! FilterViewController
-
+        filterVC.addressesFilterDelegate = self
         if let bottomSheet = filterVC.sheetPresentationController {
             bottomSheet.detents = [.medium(), .large()]
             bottomSheet.prefersGrabberVisible = true
@@ -108,3 +108,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+extension ViewController: AddressesFilter {
+    func filteredData(_ items: [UserAddressData]) {
+        self.items?.removeAll()
+        self.items = items
+        self.dataTableView.reloadData()
+    }
+}

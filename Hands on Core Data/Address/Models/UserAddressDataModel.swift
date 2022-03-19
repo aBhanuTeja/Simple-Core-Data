@@ -8,6 +8,23 @@
 import Foundation
 import CoreData
 
+struct sortDisplayData {
+    let dispayString: String
+    let isDefalt: Bool
+    let isSortOrFiltr: SortOrFilte
+}
+
+struct filterDisplayData {
+    let dispayString: String
+    let isSortOrFiltr: SortOrFilte
+}
+
+enum SortOrFilte {
+    case sort
+    case filter
+}
+
+
 class UserAddressDataModel {
     public static let shared = UserAddressDataModel()
     let context = AddressDatabase.shared.persistentContainer.viewContext
@@ -41,11 +58,20 @@ class UserAddressDataModel {
         }
     }
 
-    func getFilterData() -> [UserAddressData]? {
+    func getFilterData(_ city: String, isFilterSelected: Bool, isSortSelected: Bool) -> [UserAddressData]? {
         do {
             let completeData = UserAddressData.fetchRequest() as NSFetchRequest<UserAddressData>
-            let predicate = NSPredicate(format: "city CONTAINS %@", "Nellore")
-            completeData.predicate = predicate
+
+            if isSortSelected {
+                let sortDescriptor = NSSortDescriptor(key: "pinCode", ascending: true)
+                completeData.sortDescriptors = [sortDescriptor]
+            }
+            
+            if isFilterSelected {
+                let predicate = NSPredicate(format: "city CONTAINS %@", city)
+                completeData.predicate = predicate
+            }
+
             return try context.fetch(completeData)
         } catch {
             return nil
