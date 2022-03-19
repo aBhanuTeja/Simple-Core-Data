@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D49" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="EcommerceType" representedClassName="EcommerceType" syncable="YES">
+        <attribute name="brandName" optional="YES" attributeType="String"/>
+        <relationship name="addressEcommerce" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserAddressData" inverseName="ecommerceType" inverseEntity="UserAddressData"/>
+    </entity>
     <entity name="UserAddressData" representedClassName="UserAddressData" syncable="YES">
         <attribute name="city" optional="YES" attributeType="String"/>
         <attribute name="fullName" optional="YES" attributeType="String"/>
@@ -8,8 +12,10 @@
         <attribute name="phoneNumber" optional="YES" attributeType="String"/>
         <attribute name="pinCode" optional="YES" attributeType="String"/>
         <attribute name="state" optional="YES" attributeType="String"/>
+        <relationship name="ecommerceType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EcommerceType" inverseName="addressEcommerce" inverseEntity="EcommerceType"/>
     </entity>
     <elements>
-        <element name="UserAddressData" positionX="-63" positionY="-18" width="128" height="134"/>
+        <element name="UserAddressData" positionX="-63" positionY="-18" width="128" height="149"/>
+        <element name="EcommerceType" positionX="-63" positionY="36" width="128" height="59"/>
     </elements>
 </model>

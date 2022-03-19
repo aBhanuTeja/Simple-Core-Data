@@ -42,10 +42,14 @@ class FieldsViewController: UIViewController {
             selectedItem?.phoneNumber = phoneNumberTF.text
             selectedItem?.pinCode = pinCodeTF.text
             selectedItem?.state = stateTF.text?.firstUppercased
-
+            selectedItem?.ecommerceType?.brandName = addressTypeSegment.titleForSegment(at: addressTypeSegment.selectedSegmentIndex)
             UserAddressDataModel.shared.updateUserAddress(data: selectedItem!)
         } else {
             let context = AddressDatabase.shared.persistentContainer.viewContext
+            
+            let ecommerceType = EcommerceType(context: context)
+            ecommerceType.brandName = addressTypeSegment.titleForSegment(at: addressTypeSegment.selectedSegmentIndex)
+            
             let saveData = UserAddressData(context: context)
             saveData.city = cityTF.text?.firstUppercased
             saveData.fullName = firstNameTF.text?.firstUppercased
@@ -54,7 +58,12 @@ class FieldsViewController: UIViewController {
             saveData.phoneNumber = phoneNumberTF.text
             saveData.pinCode = pinCodeTF.text
             saveData.state = stateTF.text?.firstUppercased
-
+            
+//            saveData.ecommerceType = ecommerceType
+            
+//            or
+            ecommerceType.addToAddressEcommerce(saveData)
+            
             UserAddressDataModel.shared.saveUserAddress(data: saveData)
         }
         _ = navigationController?.popViewController(animated: true)

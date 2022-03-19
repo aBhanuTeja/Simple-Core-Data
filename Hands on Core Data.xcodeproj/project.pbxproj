@@ -21,8 +21,10 @@
 		E341171A27E216A800964E5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E341171827E216A800964E5F /* LaunchScreen.storyboard */; };
 		E341172327E227C100964E5F /* AddressDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E341172227E227C100964E5F /* AddressDatabase.swift */; };
 		E341172727E25E3A00964E5F /* FieldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E341172627E25E3A00964E5F /* FieldsViewController.swift */; };
-		E3A6919227E3B204008E7D29 /* UserAddressData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A6919027E3B204008E7D29 /* UserAddressData+CoreDataClass.swift */; };
-		E3A6919327E3B204008E7D29 /* UserAddressData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A6919127E3B204008E7D29 /* UserAddressData+CoreDataProperties.swift */; };
+		E34ED64727E664D900281DA8 /* EcommerceType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34ED64327E664D900281DA8 /* EcommerceType+CoreDataClass.swift */; };
+		E34ED64827E664D900281DA8 /* EcommerceType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34ED64427E664D900281DA8 /* EcommerceType+CoreDataProperties.swift */; };
+		E34ED64927E664D900281DA8 /* UserAddressData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34ED64527E664D900281DA8 /* UserAddressData+CoreDataClass.swift */; };
+		E34ED64A27E664D900281DA8 /* UserAddressData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34ED64627E664D900281DA8 /* UserAddressData+CoreDataProperties.swift */; };
 		E3A6919927E3B8FC008E7D29 /* UserAddressDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A6919827E3B8FC008E7D29 /* UserAddressDataModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,8 +45,10 @@
 		E341171B27E216A800964E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E341172227E227C100964E5F /* AddressDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressDatabase.swift; sourceTree = "<group>"; };
 		E341172627E25E3A00964E5F /* FieldsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsViewController.swift; sourceTree = "<group>"; };
-		E3A6919027E3B204008E7D29 /* UserAddressData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserAddressData+CoreDataClass.swift"; sourceTree = "<group>"; };
-		E3A6919127E3B204008E7D29 /* UserAddressData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserAddressData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E34ED64327E664D900281DA8 /* EcommerceType+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EcommerceType+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E34ED64427E664D900281DA8 /* EcommerceType+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EcommerceType+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E34ED64527E664D900281DA8 /* UserAddressData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserAddressData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E34ED64627E664D900281DA8 /* UserAddressData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserAddressData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E3A6919827E3B8FC008E7D29 /* UserAddressDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAddressDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,8 +128,10 @@
 		E3A6919427E3B22B008E7D29 /* CoreData Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E3A6919027E3B204008E7D29 /* UserAddressData+CoreDataClass.swift */,
-				E3A6919127E3B204008E7D29 /* UserAddressData+CoreDataProperties.swift */,
+				E34ED64327E664D900281DA8 /* EcommerceType+CoreDataClass.swift */,
+				E34ED64427E664D900281DA8 /* EcommerceType+CoreDataProperties.swift */,
+				E34ED64527E664D900281DA8 /* UserAddressData+CoreDataClass.swift */,
+				E34ED64627E664D900281DA8 /* UserAddressData+CoreDataProperties.swift */,
 			);
 			path = "CoreData Classes";
 			sourceTree = "<group>";
@@ -229,17 +235,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3A6919227E3B204008E7D29 /* UserAddressData+CoreDataClass.swift in Sources */,
 				E341170F27E216A500964E5F /* ViewController.swift in Sources */,
 				E341170B27E216A500964E5F /* AppDelegate.swift in Sources */,
 				E333C5E127E4F971008F9E5E /* HomeTableCell.swift in Sources */,
 				E3A6919927E3B8FC008E7D29 /* UserAddressDataModel.swift in Sources */,
+				E34ED64727E664D900281DA8 /* EcommerceType+CoreDataClass.swift in Sources */,
+				E34ED64A27E664D900281DA8 /* UserAddressData+CoreDataProperties.swift in Sources */,
 				E3206BA327E5ED7400D70E33 /* FilterViewController.swift in Sources */,
+				E34ED64827E664D900281DA8 /* EcommerceType+CoreDataProperties.swift in Sources */,
 				E3206BA827E606AE00D70E33 /* SortTableCell.swift in Sources */,
 				E341171527E216A500964E5F /* Address_Data.xcdatamodeld in Sources */,
 				E341172327E227C100964E5F /* AddressDatabase.swift in Sources */,
-				E3A6919327E3B204008E7D29 /* UserAddressData+CoreDataProperties.swift in Sources */,
 				E341170D27E216A500964E5F /* SceneDelegate.swift in Sources */,
+				E34ED64927E664D900281DA8 /* UserAddressData+CoreDataClass.swift in Sources */,
 				E341172727E25E3A00964E5F /* FieldsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

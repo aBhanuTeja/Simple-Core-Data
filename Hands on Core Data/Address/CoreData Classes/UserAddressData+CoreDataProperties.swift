@@ -2,7 +2,7 @@
 //  UserAddressData+CoreDataProperties.swift
 //  Hands on Core Data
 //
-//  Created by Bhanuteja on 17/03/22.
+//  Created by Bhanuteja on 20/03/22.
 //
 //
 
@@ -23,6 +23,7 @@ extension UserAddressData {
     @NSManaged public var phoneNumber: String?
     @NSManaged public var pinCode: String?
     @NSManaged public var state: String?
+    @NSManaged public var ecommerceType: EcommerceType?
 
 }
 

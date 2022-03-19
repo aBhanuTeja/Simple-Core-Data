@@ -139,8 +139,9 @@
                                     <constraint firstAttribute="height" constant="40" id="aDF-DH-KgP"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="Home"/>
-                                    <segment title="Work"/>
+                                    <segment title="Zomato"/>
+                                    <segment title="Swiggy"/>
+                                    <segment title="Google"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" systemColor="systemOrangeColor"/>
                             </segmentedControl>

@@ -31,6 +31,7 @@ class HomeTableCell: UITableViewCell {
                         Pincode: \(data.pinCode!)
                         
                         Phone number: \(data.phoneNumber!)
+                        \(data.ecommerceType!.brandName!)
                         """
     }
 }
