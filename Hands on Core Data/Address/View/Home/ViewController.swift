@@ -37,26 +37,47 @@ class ViewController: UIViewController {
     }
 
     @IBAction func filterBtnClicked(_ sender: Any) {
-        items?.removeAll()
-        if let addresses = UserAddressDataModel.shared.getFilterData(), addresses.count > 0 {
-            items = addresses
-            performOperationForAvailableData()
-        } else {
-            performOperationForUnAvailableData()
+        presentFilterView()
+//        items?.removeAll()
+//        if let addresses = UserAddressDataModel.shared.getFilterData(), addresses.count > 0 {
+//            items = addresses
+//            performOperationForAvailableData()
+//        } else {
+//            performOperationForUnAvailableData()
+//        }
+    }
+
+    fileprivate func presentFilterView() {
+        let filterVC = self.storyboard?.instantiateViewController(withIdentifier: "FilterVC") as! FilterViewController
+
+        if let bottomSheet = filterVC.sheetPresentationController {
+            bottomSheet.detents = [.medium(), .large()]
+            bottomSheet.prefersGrabberVisible = true
+            bottomSheet.prefersScrollingExpandsWhenScrolledToEdge = false
+            bottomSheet.preferredCornerRadius = 0
         }
+        present(filterVC, animated: true, completion: nil)
     }
 
     fileprivate func performOperationForAvailableData() {
         dataTableView.isHidden = false
         noDataLbl.isHidden = true
+        
+        if items!.count > 1 {
+            filterBtn.isEnabled = true
+            filterBtn.tintColor = .systemOrange
+        }
+        
         DispatchQueue.main.async {
             self.dataTableView.reloadData()
         }
     }
-    
+
     fileprivate func performOperationForUnAvailableData() {
         noDataLbl.isHidden = false
         dataTableView.isHidden = true
+        filterBtn.isEnabled = false
+        filterBtn.tintColor = .clear
     }
 }
 

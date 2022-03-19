@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E3206BA327E5ED7400D70E33 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3206BA227E5ED7400D70E33 /* FilterViewController.swift */; };
+		E3206BA827E606AE00D70E33 /* SortTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3206BA627E606AE00D70E33 /* SortTableCell.swift */; };
+		E3206BA927E606AE00D70E33 /* SortTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3206BA727E606AE00D70E33 /* SortTableCell.xib */; };
 		E333C5E127E4F971008F9E5E /* HomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C5DF27E4F971008F9E5E /* HomeTableCell.swift */; };
 		E333C5E227E4F971008F9E5E /* HomeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E333C5E027E4F971008F9E5E /* HomeTableCell.xib */; };
 		E341170B27E216A500964E5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E341170A27E216A500964E5F /* AppDelegate.swift */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E3206BA227E5ED7400D70E33 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		E3206BA627E606AE00D70E33 /* SortTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortTableCell.swift; sourceTree = "<group>"; };
+		E3206BA727E606AE00D70E33 /* SortTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortTableCell.xib; sourceTree = "<group>"; };
 		E333C5DF27E4F971008F9E5E /* HomeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableCell.swift; sourceTree = "<group>"; };
 		E333C5E027E4F971008F9E5E /* HomeTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableCell.xib; sourceTree = "<group>"; };
 		E341170727E216A500964E5F /* Hands on Core Data.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hands on Core Data.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +59,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E3206BA427E605F200D70E33 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				E3206BA227E5ED7400D70E33 /* FilterViewController.swift */,
+				E3206BA627E606AE00D70E33 /* SortTableCell.swift */,
+				E3206BA727E606AE00D70E33 /* SortTableCell.xib */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		E3206BA527E6060600D70E33 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E341170E27E216A500964E5F /* ViewController.swift */,
+				E333C5DF27E4F971008F9E5E /* HomeTableCell.swift */,
+				E333C5E027E4F971008F9E5E /* HomeTableCell.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		E34116FE27E216A500964E5F = {
 			isa = PBXGroup;
 			children = (
@@ -115,9 +141,8 @@
 		E3A6919627E3B8A8008E7D29 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E341170E27E216A500964E5F /* ViewController.swift */,
-				E333C5DF27E4F971008F9E5E /* HomeTableCell.swift */,
-				E333C5E027E4F971008F9E5E /* HomeTableCell.xib */,
+				E3206BA527E6060600D70E33 /* Home */,
+				E3206BA427E605F200D70E33 /* Filter */,
 				E341172627E25E3A00964E5F /* FieldsViewController.swift */,
 			);
 			path = View;
@@ -191,6 +216,7 @@
 			files = (
 				E341171A27E216A800964E5F /* LaunchScreen.storyboard in Resources */,
 				E341171727E216A800964E5F /* Assets.xcassets in Resources */,
+				E3206BA927E606AE00D70E33 /* SortTableCell.xib in Resources */,
 				E341171227E216A500964E5F /* Main.storyboard in Resources */,
 				E333C5E227E4F971008F9E5E /* HomeTableCell.xib in Resources */,
 			);
@@ -208,6 +234,8 @@
 				E341170B27E216A500964E5F /* AppDelegate.swift in Sources */,
 				E333C5E127E4F971008F9E5E /* HomeTableCell.swift in Sources */,
 				E3A6919927E3B8FC008E7D29 /* UserAddressDataModel.swift in Sources */,
+				E3206BA327E5ED7400D70E33 /* FilterViewController.swift in Sources */,
+				E3206BA827E606AE00D70E33 /* SortTableCell.swift in Sources */,
 				E341171527E216A500964E5F /* Address_Data.xcdatamodeld in Sources */,
 				E341172327E227C100964E5F /* AddressDatabase.swift in Sources */,
 				E3A6919327E3B204008E7D29 /* UserAddressData+CoreDataProperties.swift in Sources */,
